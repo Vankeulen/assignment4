@@ -1,0 +1,20 @@
+<template name="viewAllProfessors">
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td>Department:</td>
+        </tr>
+        
+        
+        {{#each prof in allProfessors}}
+            <tr>
+                <td>{{prof.lastname}}, {{prof.firstname}}</td>
+                <td>{{prof.department}}</td>
+            </tr>    
+        {{/each}}
+    </table>
+
+    <a href="/professors/add">Create New Professor</a>
+
+</template>
+

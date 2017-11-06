@@ -1,7 +1,7 @@
 Template.addCourse.events({
-    'click #submit': function(event, instance){
+    'click #submit': function (event, instance) {
         if (event && event.preventDefault) event.preventDefault();
-        
+
         var courseParams = {};
 
         courseParams.coursename = $("#coursename").val();

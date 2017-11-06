@@ -1,6 +1,6 @@
 
 Template.viewAllCourses.helpers({
-    allCourses: function() {
+    allCourses: function () {
         return CourseInfo.find();
     }
 })
