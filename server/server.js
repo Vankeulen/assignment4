@@ -47,10 +47,30 @@ Meteor.methods({
 
   },
 
+  addSection: function (sectionParams) {
+
+    console.log("addSection was called");
+    console.log(sectionParams);
+
+    if (sectionParams.sectionnumber > 0
+      && sectionParams.course.length > 0
+      && sectionParams.professor.length > 0) {
+
+      sectionParams.createdAt = new Date();
+      SectionInfo.insert(sectionParams);
+
+      console.log("Added to DB!");
+    } else {
+
+      console.log("Not added to DB!");
+    }
+  },
+
   resetDB: function () {
     console.log("ResetDB called. Goodbye");
     CourseInfo.remove({});
     ProfessorInfo.remove({});
+    SectionInfo.remove({});
   }
 
 });
@@ -61,6 +81,11 @@ Meteor.publish("courses", function () {
 })
 
 // Publish all elements in a table:
-Meteor.publish("professors", function() {
-	return ProfessorInfo.find();
+Meteor.publish("professors", function () {
+  return ProfessorInfo.find();
+})
+
+// Publish all elements in a table:
+Meteor.publish("sections", function () {
+  return SectionInfo.find();
 })

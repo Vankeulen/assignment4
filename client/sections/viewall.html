@@ -1,0 +1,21 @@
+<template name="viewAllSections">
+        <table>
+            <tr>
+                <td>Section Number:</td>
+                <td>Course Name:</td>
+                <tb>Professor Name:</tb>
+            </tr>
+            
+            
+            {{#each sect in allSections}}
+                <tr>
+                    <td>{{sect.sectionnumber}}</td>      
+                    <td>{{getCourseName(sect.course)}}</td>                  
+                    <td>{{getProfessorName(sect.professor)}}</td>
+                </tr>    
+            {{/each}}
+        </table>
+    
+        <a href="/sections/add">Create New Section</a>
+    
+    </template>

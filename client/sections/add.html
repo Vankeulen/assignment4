@@ -1,0 +1,24 @@
+<template name = "addSection">
+        
+            <form>
+                <br>
+                Section Number: <br> <input id = "sectionnumber" />
+                <br />
+                <br>
+                <select id="course">
+                    {{#each allCourses}}
+                    <option value="{{this._id}}"> {{this.coursename}} </option>
+                    {{/each}}
+                </select>
+                <br><br>
+                <select id = "professor">
+                        {{#each allProfessors}}
+                        <option value="{{this._id}}"> {{this.lastname}}, {{this.firstname}} </option>
+                        {{/each}}
+                    </select>
+                <br>
+                <br>
+                <button id="submit">Submit</button>
+            </form>
+        
+        </template>
