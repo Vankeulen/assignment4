@@ -15,7 +15,7 @@ Template.viewAllSections.helpers({
     },
     getProfessorName: function (id) {
         professor = ProfessorInfo.findOne(id);
-        return professor.firstname + ", " + professor.lastname;
+        return professor.lastname + ", " + professor.firstname;
     },
     getCourseName: function (id) {
         course = CourseInfo.findOne(id);
