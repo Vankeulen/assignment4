@@ -4,9 +4,11 @@
                 <br>
                 <h2>Add a Section:</h2>
                 <br>
+                <!-- data for the section number -->
                 Section Number: <br> <input id = "sectionnumber" />
                 <br />
                 <br>
+                <!-- Creates dropdown menu for course -->
                 <select id="course">
                     {{#each allCourses}}
                     <option value="{{this._id}}"> {{this.coursename}} </option>
