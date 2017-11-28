@@ -6,6 +6,7 @@ Template.addProfessor.events({
 
         var profParams = {};
 
+        //jQurey call
         profParams.firstname = $("#firstname").val();
         profParams.lastname = $("#lastname").val();
         profParams.department = $("#department").val();
